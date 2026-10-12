@@ -3,21 +3,30 @@
 }
 
 body {
-  font-family: "Geist", sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 2rem;
 }
 
-img {
-  display: block;
-  width: 300px;
-  height: 300px;
-  max-width: 100%;
-  object-fit: contain;
+main {
   margin-inline: auto;
+  max-width: 32rem;
 }
 
-.dog-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 0.5rem;
+}
+
+button {
+  justify-self: start;
+}
+
+.error {
+  color: #b00020;
 }

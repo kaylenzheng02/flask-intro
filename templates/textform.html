@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+    <a href="{{ url_for('index') }}">Home</a>
+    <h1>Submit some text</h1>
+    <form method="post">
+      <label for="text">Your text</label>
+      <input
+        id="text"
+        name="text"
+        type="text"
+        value="{{ submitted_text }}"
+        required
+      >
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+      <p class="error" role="alert">{{ error }}</p>
+    {% elif submitted_text %}
+      <p class="result">You entered: {{ submitted_text }}</p>
+    {% endif %}
+  </main>
+</body>
+</html>

@@ -3,30 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Choose which dog is cuter.">
-  <title>unethical hoops</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>Which dog is cuter?</h1>
-  <p>{{ message }}</p>
-  <form method="post">
-    <input type="hidden" name="dog_a" value="{{ dogs[0] }}">
-    <input type="hidden" name="dog_b" value="{{ dogs[1] }}">
-
-    <main class="dog-images">
-      <div>
-        <img src="{{ dogs[0] }}" alt="Dog A" width="300">
-        <button name="winner" value="{{ dogs[0] }}">Vote for Dog A</button>
-      </div>
-      <div>
-        <img src="{{ dogs[1] }}" alt="Dog B" width="300">
-        <button name="winner" value="{{ dogs[1] }}">Vote for Dog B</button>
-      </div>
-    </main>
-  </form>
+  <main>
+    <h1>Welcome</h1>
+    <p>Open the text form to submit a message.</p>
+    <a href="{{ url_for('text_form') }}">Go to the text form</a>
+  </main>
 </body>
 </html>
