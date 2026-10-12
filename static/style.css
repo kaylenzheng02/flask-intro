@@ -3,13 +3,20 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 2rem;
 }
 
 main {
   margin-inline: auto;
   max-width: 32rem;
+  background-color: #efa9d4;
+}
+
+h1 {
+  color: rgb(40, 65, 66); 
+  font-size: 2rem;
+  margin-block: 0.5rem;
 }
 
 form {
@@ -24,6 +31,8 @@ button {
 }
 
 button {
+  color:rgb(40, 65, 66);
+  background-color: #efa9d4;
   justify-self: start;
 }
 
