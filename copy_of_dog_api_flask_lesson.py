@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# %pip install flask requests pandas
+# %pip install flask requests pandas ipython
 
 import requests
 
@@ -22,7 +22,7 @@ dogs
 for dog in dogs:
     display(Image(url=dog, width=250))
 
-display(Image(dogs[0]))
+display(Image(url=dogs[0]))
 
 from pathlib import Path
 
