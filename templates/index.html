@@ -3,14 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
+  <title>Dog vote</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <main>
-    <h1>hi bro</h1>
-    <p>open to submit message.</p>
-    <a href="{{ url_for('text_form') }}">Go to the text form</a>
+    <h1>Which dog is cuter?</h1>
+    <p>{{ message }}</p>
+
+    <form method="post">
+      <input type="hidden" name="dog_a" value="{{ dogs[0] }}">
+      <input type="hidden" name="dog_b" value="{{ dogs[1] }}">
+
+      <img src="{{ dogs[0] }}" alt="Dog A" width="300">
+      <button name="winner" value="{{ dogs[0] }}">vote for dog 1</button>
+
+      <img src="{{ dogs[1] }}" alt="Dog B" width="300">
+      <button name="winner" value="{{ dogs[1] }}">vote for dog 2</button>
+    </form>
+
   </main>
 </body>
 </html>
